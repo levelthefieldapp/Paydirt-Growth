@@ -1031,15 +1031,16 @@ td.none { color: var(--ink-3); }
         <div>
           <h2 class="h-close rv">Let's find<br>your <em class="it">paydirt.</em></h2>
           <div class="close-grid">
-            <p class="rv">We score your Google presence out of 100, show you where leads are slipping, and walk you through it on a 15-minute call. It's free. Pick a time and you'll get a confirmation text within a minute. That's the system working.</p>
+            <p class="rv">We score your Google presence out of 100, show you where leads are slipping, and walk you through it on a 15-minute call. It's free. Pick a time and a calendar invite lands in your inbox right away.</p>
             <div class="rv" id="auditBox">
               <form class="form" id="auditForm" novalidate>
                 <div class="field"><label for="a-name">Your name</label><input id="a-name" name="name" autocomplete="name" placeholder="Steven Black" required></div>
                 <div class="field"><label for="a-phone">Mobile number</label><input id="a-phone" name="phone" type="tel" autocomplete="tel" placeholder="(720) 555-0100" required></div>
+                <div class="field"><label for="a-email">Email</label><input id="a-email" name="email" type="email" autocomplete="email" placeholder="you@yourbusiness.com" required></div>
                 <div class="field"><label for="a-biz">Business name</label><input id="a-biz" name="biz" autocomplete="organization" placeholder="Waterloo Turf" required></div>
                 <div class="field"><label for="a-trade">Trade</label>
                   <select id="a-trade" name="trade"><option value="">Choose your trade</option><option>Turf and landscaping</option><option>Roofing</option><option>HVAC</option><option>Plumbing</option><option>Electrical</option><option>Concrete and hardscape</option><option>Other</option></select></div>
-                <div class="field full"><label for="a-spend">Monthly Google ad spend</label>
+                <div class="field"><label for="a-spend">Monthly Google ad spend</label>
                   <select id="a-spend" name="spend"><option value="">Choose a range</option><option>Not running ads yet</option><option>$1,500 to $3,000</option><option>$3,000 to $6,000</option><option>$6,000 to $12,000</option><option>Over $12,000</option></select></div>
                 <div class="book full">
                   <label id="bookL">Pick a time for your audit call</label>
@@ -1396,34 +1397,56 @@ td.none { color: var(--ink-3); }
     wio.observe(waste);
   }
 
-  // Booking: next five weekdays, a few slots already taken
+  // Booking: real open times from the audit calendar when connected, sample times otherwise
+  var AUDIT_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwuIeyeDzAkbqIXQjbNpLPpGeiTdhcPAP7P5LzX_UjSB-t2wwqeXY45R46yIbTfU2rySg/exec';
   var daysEl = document.getElementById('days'), slotsEl = document.getElementById('slots');
-  var pickDay = null, pickSlot = null, dayList = [];
+  var pickDay = 0, pickSlot = null, dayList = [];
   var times = ['8:00 AM', '9:30 AM', '11:00 AM', '1:00 PM', '2:30 PM', '4:00 PM'];
   var dn = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], mn = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  var d = new Date(); d.setHours(12, 0, 0, 0);
-  while (dayList.length < 5) { d.setDate(d.getDate() + 1); if (d.getDay() !== 0 && d.getDay() !== 6) dayList.push(new Date(d)); }
+  var live = false;
+  function sampleDays() {
+    var out = [], d = new Date(); d.setHours(12, 0, 0, 0);
+    while (out.length < 5) {
+      d.setDate(d.getDate() + 1); if (d.getDay() === 0 || d.getDay() === 6) continue;
+      var k = out.length, iso = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+      out.push({ date: iso, dow: dn[d.getDay()], day: d.getDate(), mon: mn[d.getMonth()], slots: times.map(function (t, i) { return { t: t, taken: (k + i) % 4 === 1 }; }) });
+    }
+    return out;
+  }
+  function renderDays() {
+    daysEl.innerHTML = '';
+    dayList.forEach(function (dd, i) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'day';
+      b.innerHTML = '<small>' + dd.dow + '</small><b>' + dd.day + '</b>';
+      b.setAttribute('aria-label', dd.dow + ' ' + dd.mon + ' ' + dd.day);
+      b.setAttribute('aria-pressed', String(i === pickDay));
+      b.addEventListener('click', function () { pickDay = i; pickSlot = null; renderDays(); });
+      daysEl.appendChild(b);
+    });
+    renderSlots();
+  }
   function renderSlots() {
     slotsEl.innerHTML = '';
-    times.forEach(function (t, i) {
-      var b = document.createElement('button'); b.type = 'button'; b.className = 'slot'; b.textContent = t;
-      var taken = pickDay !== null && ((pickDay + i) % 4 === 1);
-      if (taken) { b.disabled = true; b.setAttribute('aria-label', t + ', taken'); }
-      b.setAttribute('aria-pressed', String(pickSlot === t && !taken));
-      b.addEventListener('click', function () { pickSlot = t; renderSlots(); });
+    var dd = dayList[pickDay]; if (!dd) return;
+    dd.slots.forEach(function (sl) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'slot'; b.textContent = sl.t;
+      if (sl.taken) { b.disabled = true; b.setAttribute('aria-label', sl.t + ', taken'); }
+      b.setAttribute('aria-pressed', String(pickSlot === sl.t && !sl.taken));
+      b.addEventListener('click', function () { pickSlot = sl.t; renderSlots(); });
       slotsEl.appendChild(b);
     });
   }
-  dayList.forEach(function (dt, i) {
-    var b = document.createElement('button'); b.type = 'button'; b.className = 'day';
-    b.innerHTML = '<small>' + dn[dt.getDay()] + '</small><b>' + dt.getDate() + '</b>';
-    b.setAttribute('aria-label', dn[dt.getDay()] + ' ' + mn[dt.getMonth()] + ' ' + dt.getDate());
-    b.setAttribute('aria-pressed', String(i === 0));
-    b.addEventListener('click', function () { pickDay = i; pickSlot = null; daysEl.querySelectorAll('.day').forEach(function (x, j) { x.setAttribute('aria-pressed', String(j === i)); }); renderSlots(); });
-    daysEl.appendChild(b);
-  });
-  pickDay = 0; renderSlots();
-
+  function loadSlots() {
+    if (!AUDIT_ENDPOINT) return;
+    fetch(AUDIT_ENDPOINT).then(function (r) { return r.json(); }).then(function (j) {
+      if (j && j.ok && j.days && j.days.length) {
+        live = true; dayList = j.days;
+        var first = dayList.findIndex(function (x) { return x.slots.some(function (z) { return !z.taken; }); });
+        pickDay = first < 0 ? 0 : first; pickSlot = null; renderDays();
+      }
+    }).catch(function () {});
+  }
+  dayList = sampleDays(); renderDays(); loadSlots();
   // Sticky phone CTA: after the hero, hidden once the audit section is on screen
   var mcta = document.getElementById('mcta'), heroEl = document.querySelector('.hero'), auditEl = document.getElementById('audit');
   function ctaCheck() {
@@ -1524,13 +1547,27 @@ td.none { color: var(--ink-3); }
   // Audit form
   document.getElementById('auditForm').addEventListener('submit', function (e) {
     e.preventDefault();
-    var f = e.target, name = f.name.value.trim(), phoneV = f.phone.value.trim(), biz = f.biz.value.trim();
-    var note = document.getElementById('formNote');
-    if (!name || !phoneV || !biz) { note.textContent = 'Add your name, mobile number, and business name so we know who to call.'; note.style.color = 'var(--gold)'; return; }
-    if (!pickSlot) { note.textContent = 'Pick a time for your audit call.'; note.style.color = 'var(--gold)'; return; }
-    var first = name.split(' ')[0].replace(/[<>&"]/g, ''), dt = dayList[pickDay];
-    var when = dn[dt.getDay()] + ', ' + mn[dt.getMonth()] + ' ' + dt.getDate() + ' at ' + pickSlot;
-    document.getElementById('auditBox').innerHTML = '<div class="done"><h3>You\'re booked, ' + first + '.</h3><p>' + when + ' Mountain Time. This is the demo version, so nothing was sent. On the live site you would get a confirmation text in under a minute, and we would call you at that time with your Google score.</p></div>';
+    var f = e.target, note = document.getElementById('formNote');
+    var data = { name: f.name.value.trim(), phone: f.phone.value.trim(), email: f.email.value.trim(), biz: f.biz.value.trim(), trade: f.trade.value, spend: f.spend.value };
+    function warn(t) { note.textContent = t; note.style.color = 'var(--gold)'; }
+    if (!data.name || !data.phone || !data.biz) return warn('Add your name, mobile number, and business name so we know who to call.');
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(data.email)) return warn('Add an email so we can send your calendar invite.');
+    if (!pickSlot) return warn('Pick a time for your audit call.');
+    var dd = dayList[pickDay], first = data.name.split(' ')[0].replace(/[<>&"]/g, '');
+    var when = dd.dow + ', ' + dd.mon + ' ' + dd.day + ' at ' + pickSlot;
+    var btn = f.querySelector('button[type="submit"]');
+    function done(msg) { document.getElementById('auditBox').innerHTML = '<div class="done"><h3>You\'re booked, ' + first + '.</h3><p>' + msg + '</p></div>'; }
+    if (!AUDIT_ENDPOINT || !live) {
+      return done(when + ' Mountain Time. This is the demo version, so nothing was sent.');
+    }
+    data.date = dd.date; data.time = pickSlot; data.source = (location.search || '').slice(1, 300) || document.referrer.slice(0, 300);
+    btn.disabled = true; btn.style.opacity = '.7'; warn('Booking your call...'); note.style.color = '';
+    fetch(AUDIT_ENDPOINT, { method: 'POST', body: JSON.stringify(data) }).then(function (r) { return r.json(); }).then(function (j) {
+      if (j && j.ok) return done(when + ' Mountain Time. A calendar invite is on its way to ' + data.email.replace(/[<>&"]/g, '') + ', and we\'ll call you at ' + data.phone.replace(/[<>&"]/g, '') + ' with your Google score.');
+      btn.disabled = false; btn.style.opacity = '';
+      if (j && j.error === 'taken') { warn('Someone just took that time. Pick another one.'); loadSlots(); }
+      else warn('Something went wrong booking your call. Please try again in a minute.');
+    }).catch(function () { btn.disabled = false; btn.style.opacity = ''; warn('Something went wrong booking your call. Please try again in a minute.'); });
   });
 
   // Login
