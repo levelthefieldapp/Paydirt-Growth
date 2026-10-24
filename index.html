@@ -1031,7 +1031,7 @@ td.none { color: var(--ink-3); }
         <div>
           <h2 class="h-close rv">Let's find<br>your <em class="it">paydirt.</em></h2>
           <div class="close-grid">
-            <p class="rv">We score your Google presence out of 100, show you where leads are slipping, and walk you through it on a 15-minute call. It's free. Pick a time and a calendar invite lands in your inbox right away.</p>
+            <p class="rv">We score your Google presence out of 100, show you where leads are slipping, and walk you through it on a 30-minute Google Meet. It's free. Pick a time and a calendar invite lands in your inbox right away.</p>
             <div class="rv" id="auditBox">
               <form class="form" id="auditForm" novalidate>
                 <div class="field"><label for="a-name">Your name</label><input id="a-name" name="name" autocomplete="name" placeholder="Steven Black" required></div>
@@ -1046,7 +1046,7 @@ td.none { color: var(--ink-3); }
                   <label id="bookL">Pick a time for your audit call</label>
                   <div class="days" id="days" role="group" aria-labelledby="bookL"></div>
                   <div class="slots" id="slots" role="group" aria-labelledby="bookL"></div>
-                  <p class="tz">Mountain Time · 15 minutes · by phone</p>
+                  <p class="tz">Mountain Time · 30 minutes · Google Meet</p>
                 </div>
                 <div class="full" style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:6px">
                   <button class="btn" type="submit"><span class="roll"><span data-t="Book my free audit">Book my free audit</span></span><span class="arrow"><svg><use href="#ar"/></svg><svg><use href="#ar"/></svg></span></button>
@@ -1563,7 +1563,7 @@ td.none { color: var(--ink-3); }
     data.date = dd.date; data.time = pickSlot; data.source = (location.search || '').slice(1, 300) || document.referrer.slice(0, 300);
     btn.disabled = true; btn.style.opacity = '.7'; warn('Booking your call...'); note.style.color = '';
     fetch(AUDIT_ENDPOINT, { method: 'POST', body: JSON.stringify(data) }).then(function (r) { return r.json(); }).then(function (j) {
-      if (j && j.ok) return done(when + ' Mountain Time. A calendar invite is on its way to ' + data.email.replace(/[<>&"]/g, '') + ', and we\'ll call you at ' + data.phone.replace(/[<>&"]/g, '') + ' with your Google score.');
+      if (j && j.ok) return done(when + ' Mountain Time. Your invite with the Google Meet link and the agenda is on its way to ' + data.email.replace(/[<>&"]/g, '') + '.');
       btn.disabled = false; btn.style.opacity = '';
       if (j && j.error === 'taken') { warn('Someone just took that time. Pick another one.'); loadSlots(); }
       else warn('Something went wrong booking your call. Please try again in a minute.');
