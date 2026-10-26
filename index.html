@@ -18,7 +18,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f2925'/%3E%3Cpath d='M5 12 L10.5 7 L13.6 9.6 L19 4.8 L26 12 Z' fill='%23eceeeb' opacity='.45'/%3E%3Crect x='5' y='14' width='18' height='3.2' rx='1.6' fill='%23eceeeb' opacity='.7'/%3E%3Crect x='5' y='19' width='22' height='3.2' rx='1.6' fill='%23eceeeb'/%3E%3Crect x='5' y='24' width='22' height='3.2' rx='1.6' fill='%23c6a265'/%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Paydirt Watchdog", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "39", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Paydirt Growth", "email": "steven@paydirtgrowth.com"}, "url": "https://paydirtgrowth.com/", "image": "https://paydirtgrowth.com/og-image.png", "description": "Free Google Ads Leak Report for contractors and trade businesses. Watchdog checks your account every week, finds spend that brought in nothing, and shows exactly how to fix it."}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can Watchdog change my ads?", "acceptedAnswer": {"@type": "Answer", "text": "Not on the $39 plan. Read only means Google lets us look, not touch. With Plus (coming soon), owners who run their own ads can approve one-click fixes and undo them. Plus never raises your budget and never touches an account an agency runs."}}, {"@type": "Question", "name": "Do I have to tell my agency?", "acceptedAnswer": {"@type": "Answer", "text": "Up to you. We never contact them. They may see our read-only login in your account's user list."}}, {"@type": "Question", "name": "What if it flags something that isn't waste?", "acceptedAnswer": {"@type": "Answer", "text": "Tap \"This isn't waste.\" It comes out of your totals and won't come back."}}, {"@type": "Question", "name": "What if it doesn't find anything?", "acceptedAnswer": {"@type": "Answer", "text": "Then you're in good shape. And if Watchdog doesn't find more waste than its price in your first 30 days, that month is free."}}, {"@type": "Question", "name": "How fast do I get my Leak Report?", "acceptedAnswer": {"@type": "Answer", "text": "Within 2 business days of giving access, by email. No login needed."}}, {"@type": "Question", "name": "Who sees my data?", "acceptedAnswer": {"@type": "Answer", "text": "Paydirt and the services that run Watchdog, each named in our Privacy Policy. We never sell your data."}}, {"@type": "Question", "name": "Are you an agency trying to win my account?", "acceptedAnswer": {"@type": "Answer", "text": "Paydirt Growth, which runs Watchdog, also manages Google Ads for some trade businesses. We only bring it up if you ask."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can Watchdog change my ads?", "acceptedAnswer": {"@type": "Answer", "text": "Not on the $39 plan. We can look, but we can't change anything. With Plus (coming soon), owners who run their own ads can approve one-click fixes and undo them. Plus never raises what you spend and never touches an account an agency runs."}}, {"@type": "Question", "name": "Do I have to tell my agency?", "acceptedAnswer": {"@type": "Answer", "text": "Up to you. We never contact them. They may see us listed as a user in your account."}}, {"@type": "Question", "name": "What if it flags something that isn't waste?", "acceptedAnswer": {"@type": "Answer", "text": "Tap \"This isn't waste.\" It comes out of your totals and won't come back."}}, {"@type": "Question", "name": "What if it doesn't find anything?", "acceptedAnswer": {"@type": "Answer", "text": "Then you're in good shape. And if Watchdog doesn't find more waste than its price in your first 30 days, that month is free."}}, {"@type": "Question", "name": "How fast do I get my Leak Report?", "acceptedAnswer": {"@type": "Answer", "text": "Within 2 business days of giving access, by email. No login needed."}}, {"@type": "Question", "name": "Who sees my data?", "acceptedAnswer": {"@type": "Answer", "text": "Paydirt and the services that run Watchdog, each named in our Privacy Policy. We never sell your data."}}, {"@type": "Question", "name": "Are you an agency trying to win my account?", "acceptedAnswer": {"@type": "Answer", "text": "Paydirt Growth, which runs Watchdog, also manages Google Ads for some trade businesses. We only bring it up if you ask."}}]}</script>
 <title>Paydirt Watchdog | Google Ads Audit for Contractors</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -457,6 +457,31 @@ html.locked, html.locked body { overflow: hidden; }
 .lk-lock .unl { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 13.5px; font-weight: 600; color: var(--ink); }
 .lk-lock .unl svg { width: 14px; height: 14px; }
 @media (max-width: 480px) { .lk-fix, .lk-lock { margin-left: 0; } }
+.fx { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 18px; }
+.fx > li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 10px; }
+.fx-n { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; box-shadow: inset 0 0 0 1px var(--line); font-size: 12px; font-weight: 600; color: var(--ink); margin-top: 1px; }
+.fx-b { min-width: 0; }
+.fx-t { display: block; font-size: 15px; font-weight: 600; color: var(--ink); }
+.fx-b p { margin: 4px 0 0; font-size: 14px; line-height: 1.5; color: var(--ink-2); }
+.st { margin-top: 10px; border-radius: 12px; background: var(--paper-2); padding: 4px 12px; font-size: 13px; }
+.st-r { display: grid; grid-template-columns: minmax(0, 1fr) 44px 48px 40px; gap: 8px; padding: 7px 0; border-top: 1px solid var(--line); color: var(--ink); font-variant-numeric: tabular-nums; }
+.st-r span:not(:first-child) { text-align: right; }
+.st-r span:first-child { overflow-wrap: anywhere; }
+.st-r span:last-child { color: var(--c-red-ink); font-weight: 600; }
+.st-hd { border-top: 0; font-size: 11.5px; font-weight: 600; color: var(--ink-3); }
+.st-hd span:last-child { color: var(--ink-3); }
+.cp { position: relative; margin-top: 10px; border-radius: 12px; background: var(--paper-2); padding: 12px 74px 12px 14px; }
+.cp-txt { margin: 0; font-family: var(--mono); font-size: 13px; line-height: 1.6; color: var(--ink); white-space: pre-wrap; }
+.fx-b .cp-note { margin: 0; font-family: inherit; font-size: 14px; line-height: 1.5; color: var(--ink); }
+.cp-btn { position: absolute; top: 8px; right: 8px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 0; background: var(--card); box-shadow: inset 0 0 0 1px var(--line); font: inherit; font-size: 12.5px; font-weight: 600; color: var(--ink); cursor: pointer; }
+.cp-btn:hover { box-shadow: inset 0 0 0 1px var(--ink-3); }
+.fx-b .fx-how { font-size: 13.5px; }
+.fx-plus { margin-top: 12px; padding: 12px 14px; border-radius: 12px; border: 1px dashed color-mix(in srgb, var(--gold) 55%, var(--line)); display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+.fx-apply { display: inline-flex; align-items: center; gap: 7px; min-height: 36px; padding: 0 14px; border-radius: 999px; background: var(--gold); color: #151c19; font-size: 13.5px; font-weight: 650; text-decoration: none; }
+.fx-apply svg { width: 14px; height: 14px; }
+.fx-pn { flex-basis: 100%; font-size: 13px; color: var(--ink-2); }
+@media (max-width: 480px) { .fx > li { grid-template-columns: 22px minmax(0, 1fr); gap: 8px; } .cp { padding-right: 14px; padding-top: 46px; } .st { padding: 4px 10px; } .st-r { grid-template-columns: minmax(0, 1fr) 36px 44px 36px; gap: 6px; } }
+.rp-foot a { color: var(--ink); font-weight: 600; text-underline-offset: 3px; }
 .rp-foot { padding: 16px clamp(18px, 2.4vw, 26px); font-size: 13.5px; color: var(--ink-2); background: var(--paper-2); line-height: 1.5; }
 
 /* Agency vs self-run */
@@ -581,6 +606,16 @@ html.locked, html.locked body { overflow: hidden; }
 .compare tr.us td { color: var(--ink); font-weight: 600; background: color-mix(in srgb, var(--gold) 12%, transparent); }
 .compare tr.us td:first-child { padding-left: 10px; border-radius: 8px 0 0 8px; } .compare tr.us td:last-child { border-radius: 0 8px 8px 0; }
 .compare tr td:first-child { padding-left: 10px; } .compare th:first-child { padding-left: 10px; }
+@media (max-width: 640px) {
+  .compare table, .compare tbody { display: block; min-width: 0; }
+  .compare thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .compare tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 14px; row-gap: 4px; padding: 13px 10px; border-top: 1px solid var(--line); }
+  .compare tr.us { border-top: 0; border-radius: 10px; margin-top: 2px; background: color-mix(in srgb, var(--gold) 12%, transparent); }
+  .compare td, .compare tr td:first-child, .compare tr.us td, .compare tr.us td:first-child { padding: 0; border: 0; background: none; border-radius: 0; }
+  .compare td:first-child { font-weight: 600; }
+  .compare td:nth-child(2) { text-align: right; color: var(--ink); }
+  .compare td:nth-child(3) { grid-column: 1 / -1; font-size: 14px; }
+}
 
 :root { --c-red: #b4432f; --c-amb: #c08a1e; --c-gry: #8d9590; --c-ok: #2f7a52; --c-red-bg: #f6e3de; --c-amb-bg: #f7edd6; --c-gry-bg: #e8ebe8; --c-gold-bg: #f2e8d4; --c-red-ink: #8f2f1f; --c-amb-ink: #7a5410; --c-gry-ink: #4f5753; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --c-red-bg: #3a1f19; --c-amb-bg: #3a2e14; --c-gry-bg: #232a27; --c-gold-bg: #33291a; --c-red-ink: #f0a594; --c-amb-ink: #e8c37a; --c-gry-ink: #b9c0bc; } }
@@ -623,6 +658,18 @@ html.locked, html.locked body { overflow: hidden; }
 .disclose { padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px)); font-size: 13px; color: var(--pine-ink-2); }
 .foot .wrap:first-child { padding-bottom: 12px; }
 #managed .rail { min-height: 1px; }
+.mail-lbl { margin: 0 0 10px; font-size: 12.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+.fixes .n { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--c-red-bg); color: var(--c-red-ink); font-family: inherit; font-size: 12px; font-weight: 650; align-self: start; margin-top: 1px; }
+.fixes li { align-items: start; }
+.mail-body .mail-fine { font-size: 12.5px; color: var(--ink-3); margin-top: 14px; }
+.hero-visual .built { margin-top: 18px; padding-top: 0; border-top: 0; max-width: none; }
+.steps3 { list-style: none; margin: clamp(40px, 5vw, 72px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 1.6vw, 20px); counter-reset: none; }
+.steps3 li { display: grid; gap: 14px; align-content: start; padding: clamp(20px, 2.2vw, 28px); border-radius: 20px; background: var(--card); border: 1px solid var(--line); }
+.s3n { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--gold); color: #151c19; font-size: 17px; font-weight: 700; }
+.steps3 b { display: block; font-family: var(--display); font-variation-settings: "wdth" 96; font-size: clamp(20px, 1.8vw, 24px); font-weight: 650; letter-spacing: -0.02em; line-height: 1.15; color: var(--ink); }
+.steps3 li span:not(.s3n) { display: block; margin-top: 8px; font-size: 16px; color: var(--ink-2); line-height: 1.45; }
+@media (max-width: 760px) { .steps3 { grid-template-columns: 1fr; } .steps3 li { grid-template-columns: 40px minmax(0, 1fr); gap: 14px; align-items: start; } }
+.eyebrow { align-items: flex-start; } .eyebrow .dot { flex: none; margin-top: .5em; }
 </style>
 </head>
 <body>
@@ -647,9 +694,9 @@ html.locked, html.locked body { overflow: hidden; }
   <div class="wrap">
     <a class="logo" href="#top" aria-label="Paydirt Watchdog home"><svg><use href="#mark"/></svg><span class="wm"><b>Paydirt</b> <span>Watchdog</span></span></a>
     <nav class="nav-links" aria-label="Main">
-      <a class="hide-sm" href="#how">How it works</a>
-      <a class="hide-sm" href="#checks">What it checks</a>
+      <a class="hide-sm" href="#sample">Example</a>
       <a class="hide-sm" href="#pricing">Pricing</a>
+      <a class="hide-sm" href="#how">How it works</a>
       <a class="hide-sm" href="#faq">FAQ</a>
       <a class="btn sm" href="#start"><span class="roll"><span data-t="Free Leak Report">Free Leak Report</span></span><span class="arrow"><svg><use href="#ar"/></svg><svg><use href="#ar"/></svg></span></a>
       <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav"><span class="roll"><span data-t="Menu">Menu</span></span><i aria-hidden="true"></i></button>
@@ -660,50 +707,50 @@ html.locked, html.locked body { overflow: hidden; }
 <main id="main" tabindex="-1">
   <section class="hero">
     <div class="wrap">
-      <div class="eyebrow fade-in" style="animation-delay:.1s"><span class="dot"></span>For trade businesses spending $1,500+ a month on Google Ads</div>
+      <div class="eyebrow fade-in" style="animation-delay:.1s"><span class="dot"></span><span>For roofers, plumbers, HVAC, landscapers and other trades spending $500+ a month on Google Ads</span></div>
       <h1 class="h-hero" aria-label="Plug the leaks in your Google Ads.">
         <span class="ln"><span>Plug the leaks</span></span>
         <span class="ln"><span>in your Google <em class="it">Ads.</em></span></span>
       </h1>
       <div class="hero-grid">
         <div class="hero-copy fade-in">
-          <p>Watchdog checks your Google Ads every week, finds the clicks that never turn into jobs, and shows you exactly how to fix them.</p>
+          <p>Some of your Google Ads money pays for clicks that never call. Watchdog finds them every week and shows you how to stop it.</p>
           <div class="cta-row">
-            <a class="btn" href="#start"><span class="roll"><span data-t="Get your free Leak Report">Get your free Leak Report</span></span><span class="arrow"><svg><use href="#ar"/></svg><svg><use href="#ar"/></svg></span></a>
-            <a class="link hero-link" href="#sample"><span class="roll"><span data-t="See a sample report">See a sample report</span></span><span class="arrow"><svg><use href="#ar"/></svg><svg><use href="#ar"/></svg></span></a>
+            <a class="btn" href="#start"><span class="roll"><span data-t="Get your free report">Get your free report</span></span><span class="arrow"><svg><use href="#ar"/></svg><svg><use href="#ar"/></svg></span></a>
+            <a class="link hero-link" href="https://watchdog.paydirtgrowth.com/demo"><span class="roll"><span data-t="Try the free demo">Try the free demo</span></span><span class="arrow"><svg><use href="#ar"/></svg><svg><use href="#ar"/></svg></span></a>
           </div>
           <div class="chips">
-            <span><svg><use href="#chk"/></svg>Read-only. Watchdog looks, never touches.</span>
-            <span><svg><use href="#chk"/></svg>Works with your agency or on your own</span>
-            <span><svg><use href="#chk"/></svg>$39 a month after the free report</span>
-          </div>
-          <div class="built">
-            <img src="img/founder.webp" alt="" width="44" height="44" loading="eager">
-            <p><b>Built by a trade owner, for trade owners.</b><span>Steven Black · Owner, Waterloo Turf Denver</span></p>
+            <span><svg><use href="#chk"/></svg>Nothing in your ads changes unless you say so</span>
+            <span><svg><use href="#chk"/></svg>Works whether you run your ads or someone else does</span>
+            <span><svg><use href="#chk"/></svg>First report free. Then $39 a month, cancel anytime.</span>
           </div>
         </div>
 
         <div class="hero-visual fade-in" style="animation-delay:.6s">
+          <p class="mail-lbl">This is the email you get every Monday</p>
           <article class="mail armed" id="mail" aria-label="Sample Monday email from Paydirt Watchdog">
             <div class="mail-top">
               <div class="mail-from"><span class="av"><svg><use href="#mark"/></svg></span><div><b>Paydirt Watchdog</b><small>Monday, 6:30 AM · to you</small></div></div>
               <span class="sample-tag">Sample data</span>
             </div>
             <div class="mail-body">
-              <h2 class="mail-subj">Last week, <span class="amt num" id="mailAmt">$460</span> of your ad spend brought in nothing.</h2>
-              <p>That's <b>$1,780</b> over 30 days. This week's three fixes:</p>
+              <h2 class="mail-subj">Last week, <span class="amt num" id="mailAmt">$460</span> of your ad money brought in nothing.</h2>
+              <p>That's <b>$1,780</b> over 30 days. Here are 3 fixes:</p>
               <ol class="fixes">
-                <li><span class="n num">01</span><span>Block searches for work you don't do, like "sod installation" and "turf cleaning." 11 clicks, no leads.</span><span class="d num">$210</span></li>
-                <li><span class="n num">02</span><span>Stop ads from 8 PM to 7 AM, when nobody is there to answer.</span><span class="d num">$150</span></li>
-                <li><span class="n num">03</span><span>Block job-seeker and DIY searches like "turf installer jobs"</span><span class="d num">$100</span></li>
+                <li><span class="n num">1</span><span>Block searches for work you don't do, like "roof repair." 11 clicks, no calls.</span><span class="d num">$210</span></li>
+                <li><span class="n num">2</span><span>Stop ads from 8 PM to 7 AM, when nobody answers the phone.</span><span class="d num">$150</span></li>
+                <li><span class="n num">3</span><span>Block people looking for jobs or DIY help.</span><span class="d num">$100</span></li>
               </ol>
-              <div class="fwd"><b>Have an agency?</b> Forward this. The note asks, it doesn't blame.</div>
-              <div class="ask"><span>Last week's fixes:</span><span class="o">2 of 3 made</span><span class="o">1 still open</span></div>
-              <p style="font-size:12.5px;color:var(--ink-3);margin-top:14px">From your Google Ads account, last 7 days. Google doesn't show every search term.</p>
+              <p class="mail-fine">From the last 7 days. Google doesn't show every search term.</p>
             </div>
           </article>
         </div>
       </div>
+      <ol class="steps3 fade-in" style="animation-delay:.8s" aria-label="How it works">
+        <li><span class="s3n">1</span><div><b>Connect your Google Ads</b><span>Takes about 2 minutes. You can disconnect anytime.</span></div></li>
+        <li><span class="s3n">2</span><div><b>We check it every week</b><span>We look at where every dollar went.</span></div></li>
+        <li><span class="s3n">3</span><div><b>You get an email Monday</b><span>What's wasting money and how to fix it.</span></div></li>
+      </ol>
     </div>
   </section>
 
@@ -717,7 +764,7 @@ html.locked, html.locked body { overflow: hidden; }
           <p class="rv">I spent $2,500 last month and got two real leads.</p>
           <p class="rv">My agency sends a report. I can&rsquo;t tell if anyone touched the account.</p>
         </div>
-        <p class="lede rv">All of it shows up in your Google Ads account. Watchdog shows you, every Monday.</p>
+        <p class="lede rv">The answers are in your Google Ads account. Watchdog digs them out and emails you every Monday.</p>
       </div>
     </div>
   </section>
@@ -728,7 +775,7 @@ html.locked, html.locked body { overflow: hidden; }
       <div class="leak-grid">
         <div>
           <h2 class="h2 rv">What your free report <em class="it">shows.</em></h2>
-          <p class="lede rv">Every leak, rated, with the fix. Free, no card.</p>
+          <p class="lede rv">Every leak, how sure we are, and how to fix it. Free, no card.</p>
           <div class="rate rv" aria-label="How each leak is rated">
             <div class="rt"><span class="pill p-red">Brought in nothing</span><span>Clear waste. Counts in your total.</span></div>
             <div class="rt"><span class="pill p-amb">Might be waste</span><span>Your call. Not in the total.</span></div>
@@ -738,60 +785,144 @@ html.locked, html.locked body { overflow: hidden; }
             <span class="incl-h">Every fix comes with</span>
             <ol>
               <li><span><b>See it yourself.</b> Where to look in Google Ads.</span></li>
-              <li><span><b>What to change.</b> Exact steps and copy-ready text.</span></li>
-              <li><span><b>A note for your agency.</b> Worded as questions.</span></li>
+              <li><span><b>What to change.</b> Exact steps, with text you can copy.</span></li>
+              <li><span><b>A note for your agency.</b> Polite questions, ready to send.</span></li>
             </ol>
           </div>
-          <div class="rv" style="margin-top:28px"><a class="btn" href="#start"><span class="roll"><span data-t="Get your free report">Get your free report</span></span><span class="arrow"><svg><use href="#ar"/></svg><svg><use href="#ar"/></svg></span></a></div>
+          <div class="rv cta-row" style="margin-top:28px;gap:20px"><a class="btn" href="#start"><span class="roll"><span data-t="Get your free report">Get your free report</span></span><span class="arrow"><svg><use href="#ar"/></svg><svg><use href="#ar"/></svg></span></a><a class="link" href="https://watchdog.paydirtgrowth.com/demo"><span class="roll"><span data-t="Click through the full sample">Click through the full sample</span></span><span class="arrow"><svg><use href="#ar"/></svg><svg><use href="#ar"/></svg></span></a></div>
         </div>
         <article class="report rv" id="report" aria-label="Sample Leak Report">
-          <div class="rp-head"><b>Leak Report · Sample Turf Co.</b><span class="sample-tag">Sample data</span></div>
+          <div class="rp-head"><b>Leak Report · Sample Trade Company</b><span class="sample-tag">Sample data</span></div>
           <div class="rp-bar" role="img" aria-label="Of $5,600 spent: $1,780 brought in nothing, $380 might be waste, $240 worth watching, $3,200 brought in leads">
             <span class="sb s-red" style="flex:1780"></span><span class="sb s-amb" style="flex:380"></span><span class="sb s-gry" style="flex:240"></span><span class="sb s-ok" style="flex:3200"></span>
           </div>
           <div class="rp-key"><span><i class="d-red"></i>Nothing $1,780</span><span><i class="d-amb"></i>Maybe $380</span><span><i class="d-gry"></i>Watching $240</span><span><i class="d-ok"></i>Brought leads $3,200</span></div>
           <div class="rp-sum">
             <div><div class="l">Spend that brought in nothing, last 30 days</div><div class="big num" id="rpAmt">$1,780</div><div class="sub">of $5,600 spent. About 1 of every 3 dollars.</div></div>
-            <div><div class="l">Search terms Google showed</div><div class="score num">86%</div><span class="trk"><svg><use href="#chk"/></svg>Lead count can be trusted</span></div>
+            <div><div class="l">Searches Google lets us see</div><div class="score num">86%</div><span class="trk"><svg><use href="#chk"/></svg>Your lead count is accurate</span></div>
           </div>
-          <div class="lk">
+          <div class="lk lk-one">
             <div class="lk-h"><span class="n num">01</span><b>Searches for work you don't do</b><span class="d num">$690</span></div>
             <div class="lk-meta"><span class="pill p-red">Brought in nothing</span><span>31 clicks, 0 leads</span></div>
-            <div class="lk-fix"><b>Fix:</b> Add these as negative keywords. Check the list first.
-              <div class="terms-list"><span>sod</span><span>turf cleaning</span><span>artificial plants</span><span>turf rug</span><span>lawn mowing</span></div>
-            </div>
+            <ol class="fx">
+              <li>
+                <span class="fx-n">1</span>
+                <div class="fx-b">
+                  <b class="fx-t">See it yourself</b>
+                  <p>Type "Search terms" in the Google Ads search bar. Set the dates to the last 30 days and sort by cost.</p>
+                  <div class="st" role="table" aria-label="Search terms behind this leak">
+                    <div class="st-r st-hd" role="row"><span role="columnheader">Search term</span><span role="columnheader">Clicks</span><span role="columnheader">Cost</span><span role="columnheader">Leads</span></div>
+                    <div class="st-r" role="row"><span role="cell">roof repair</span><span role="cell">13</span><span role="cell">$290</span><span role="cell">0</span></div>
+                    <div class="st-r" role="row"><span role="cell">vinyl siding near me</span><span role="cell">10</span><span role="cell">$226</span><span role="cell">0</span></div>
+                    <div class="st-r" role="row"><span role="cell">gutter guards</span><span role="cell">8</span><span role="cell">$174</span><span role="cell">0</span></div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <span class="fx-n">2</span>
+                <div class="fx-b">
+                  <b class="fx-t">What to change</b>
+                  <p>Block these searches. Google calls them negative keywords. Remove any you actually sell first.</p>
+                  <div class="cp">
+                    <pre class="cp-txt" id="cpTerms">roof repair
+vinyl siding
+gutter guards</pre>
+                    <button type="button" class="cp-btn" data-copy="cpTerms">Copy</button>
+                  </div>
+                  <p class="fx-how">Type "negative keyword lists" in the search bar, open your list, paste, and save. About two minutes.</p>
+                  <div class="fx-plus">
+                    <a class="fx-apply" href="#start" data-plus="1"><svg aria-hidden="true"><use href="#chk"/></svg>Apply this fix</a>
+                    <span class="pill p-gold">Plus · coming soon</span>
+                    <span class="fx-pn">One click instead of the steps above. Undo anytime.</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <span class="fx-n">3</span>
+                <div class="fx-b">
+                  <b class="fx-t">A note for your agency</b>
+                  <div class="cp">
+                    <p class="cp-txt cp-note" id="cpNote">About $690 last month went to searches like "roof repair," "vinyl siding near me" and "gutter guards," with no leads. Can we add those as negative keywords? Is there a reason they were still running?</p>
+                    <button type="button" class="cp-btn" data-copy="cpNote">Copy</button>
+                  </div>
+                </div>
+              </li>
+            </ol>
           </div>
-          <div class="lk">
-            <div class="lk-h"><span class="n num">02</span><b>Job-seeker and DIY searches</b><span class="d num">$520</span></div>
-            <div class="lk-meta"><span class="pill p-red">Brought in nothing</span><span>24 clicks, 0 leads</span></div>
-            <div class="lk-fix"><b>Fix:</b> Add these as negative keywords.
-              <div class="terms-list"><span>jobs</span><span>hiring</span><span>diy</span><span>how to install</span></div>
-            </div>
-          </div>
-          <div class="lk">
-            <div class="lk-h"><span class="n num">03</span><b>Ads running 8 PM to 7 AM</b><span class="d num">$430</span></div>
-            <div class="lk-meta"><span class="pill p-red">Brought in nothing</span><span>Nobody there to answer</span></div>
-            <div class="lk-fix"><b>Fix:</b> Set your ad schedule to the hours you answer the phone.</div>
-          </div>
-          <div class="rp-foot">Plus 2 smaller leaks below. Google Ads data, Sep 1 to 30. Every fix in the real report includes where to click.</div>
+          <div class="rp-foot">4 more leaks in the full sample, each laid out the same way. <a href="https://watchdog.paydirtgrowth.com/demo">Click through it</a>. Google Ads data, Sep 1 to 30.</div>
         </article>
       </div>
     </div>
   </section>
-
-  <section class="band-sec" id="how">
+  <section class="band-sec" id="pricing" style="padding-top:0">
+    <div class="wrap railed">
+      <div class="rail"><span class="vlabel">Pricing</span></div>
+      <div>
+        <h2 class="h2 rv">Start free. Stay if it <em class="it">pays.</em></h2>
+        <div class="price2">
+          <div class="pc-free rv">
+            <div class="pc-name">Free Leak Report</div>
+            <div class="pc-price num">$0</div>
+            <div class="pc-alt">One time. No card needed.</div>
+            <ul class="pc-list">
+              <li><svg><use href="#chk"/></svg><span>Spend that brought in nothing, last 30 days</span></li>
+              <li><svg><use href="#chk"/></svg><span>Every leak, with exactly what to change</span></li>
+              <li><svg><use href="#chk"/></svg><span>A check that your calls and forms are being counted</span></li>
+            </ul>
+            <div class="pc-cta"><a class="btn ghost" href="#start"><span class="roll"><span data-t="Get your free report">Get your free report</span></span></a></div>
+          </div>
+          <div class="pc-dog rv">
+            <div class="pc-name">Watchdog<span class="pc-badge">First 20 owners: $29</span></div>
+            <div class="pc-price num">$39<small> / month</small></div>
+            <div class="pc-alt"><b>The first 20 owners pay $29 a month</b>, locked in for as long as they stay. Or pay $349 a year.</div>
+            <ul class="pc-list">
+              <li><svg><use href="#chk"/></svg><span>The Monday email with your three best fixes</span></li>
+              <li><svg><use href="#chk"/></svg><span>A weekly check that the fixes got made</span></li>
+              <li><svg><use href="#chk"/></svg><span>New leaks as they show up, with a note for your agency</span></li>
+              <li><svg><use href="#chk"/></svg><span>Charts that show if things are getting better</span></li>
+            </ul>
+            <div class="guar"><b>30-day guarantee.</b> If Watchdog doesn't find more wasted money than it costs in your first 30 days, that month is free. No contract. Cancel anytime.</div>
+            <div class="pc-cta"><a class="btn" href="#start"><span class="roll"><span data-t="Start with the free report">Start with the free report</span></span><span class="arrow"><svg><use href="#ar"/></svg><svg><use href="#ar"/></svg></span></a></div>
+          </div>
+          <div class="pc-free pc-plus rv">
+            <div class="pc-name">Watchdog Plus<span class="pc-soon">Coming soon</span></div>
+            <div class="pc-price num">$59<small> / month</small></div>
+            <div class="pc-alt">Everything in Watchdog, plus one-click fixes for owners who run their own ads.</div>
+            <ul class="pc-list">
+              <li><svg><use href="#chk"/></svg><span>One-click fixes: block searches, stop ads where you don't work, and show ads only when someone answers</span></li>
+              <li><svg><use href="#chk"/></svg><span>You see each change first and approve it. Undo in one click.</span></li>
+              <li><svg><use href="#chk"/></svg><span>Never raises what you spend</span></li>
+              <li><svg><use href="#chk"/></svg><span>Coming later: same-day alerts, which clicks became booked jobs, and a monthly grade for your agency</span></li>
+            </ul>
+            <div class="pc-cta"><a class="btn ghost" href="#start" id="plusBtn"><span class="roll"><span data-t="Get on the list">Get on the list</span></span></a></div>
+          </div>
+        </div>
+        <div class="compare rv">
+          <h3>Compared to what you'd do otherwise</h3>
+          <div class="cmp-scroll"><table>
+            <thead><tr><th>Option</th><th>Cost</th><th>The catch</th></tr></thead>
+            <tbody>
+              <tr><td>Your agency's own report</td><td>Free</td><td>They grade their own work</td></tr>
+              <tr><td>Free online graders</td><td>Free</td><td>One time, then a sales pitch</td></tr>
+              <tr><td>A one-time expert audit</td><td>$500 to $800</td><td>Once, then nobody's watching</td></tr>
+              <tr><td>Adalysis</td><td>$127 to $149 a month</td><td>Built for ad pros who work in the account all day</td></tr>
+              <tr><td>Optmyzr</td><td>$209 to $299 a month</td><td>Built for agencies spending $25k+ a month</td></tr>
+              <tr class="us"><td>Paydirt Watchdog</td><td>$39 a month</td><td>Every week, on your side</td></tr>
+            </tbody>
+          </table></div>
+          <p class="cmp-note">Adalysis and Optmyzr prices are their published entry plans, monthly or billed yearly, as of October 2026.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="band-sec" id="how" style="padding-top:0">
     <div class="wrap railed">
       <div class="rail"><span class="vlabel">How it works</span></div>
       <div>
-        <h2 class="h2 rv">Two minutes to set up. Then it <em class="it">watches.</em></h2>
-        <p class="lede rv">Most owners never need to log in. Everything comes in the Monday email.</p>
-        <div class="rows">
-          <div class="row static rv"><span class="idx num">01</span><h3>Give read-only access</h3><p>Add audits@paydirtgrowth.com as a Read only user. We send the steps.</p></div>
-          <div class="row static rv"><span class="idx num">02</span><h3>Get your free Leak Report</h3><p>Every leak, what it cost, and exactly what to change.</p></div>
-          <div class="row static rv"><span class="idx num">03</span><h3>Three fixes every Monday</h3><p>The fixes worth the most, then a check that they got made.</p></div>
-        </div>
+        <h2 class="h2 rv">Setup takes two minutes. <em class="it">Here's all of it.</em></h2>
+        <p class="lede rv">You add us as a user in Google Ads, the same way you'd add an employee. After that, most owners never need to log in. Everything comes in the Monday email.</p>
         <figure class="setup rv" aria-labelledby="setupCap">
-          <figcaption id="setupCap"><b>The 2-minute setup.</b> Read only means we can look, never touch. Remove us anytime.</figcaption>
+          <figcaption id="setupCap"><b>The 2-minute setup.</b> Read only means we can look but not change anything. Remove us anytime.</figcaption>
           <div class="shots">
             <div class="shot">
               <div class="scr" aria-hidden="true">
@@ -832,27 +963,6 @@ html.locked, html.locked body { overflow: hidden; }
       </div>
     </div>
   </section>
-
-  <section class="band-sec" id="checks" style="padding-top:0">
-    <div class="wrap railed">
-      <div class="rail"><span class="vlabel">What it checks</span></div>
-      <div>
-        <h2 class="h2 rv">The leaks we see in <em class="it">trade accounts.</em></h2>
-        <p class="lede rv">Built around how homeowners search for a contractor.</p>
-        <div class="checks rv">
-          <div class="first"><span class="k">Checked first</span><h3>Broken lead tracking</h3><p>If Google can't count your leads, every other number is a guess.</p></div>
-          <div><span class="k num">02</span><h3>Job seekers and DIY</h3><p>"Turf installer jobs." "How to install pavers." Never going to hire you.</p></div>
-          <div><span class="k num">03</span><h3>Work you don't do</h3><p>Clicks for services you don't offer.</p></div>
-          <div><span class="k num">04</span><h3>Outside your service area</h3><p>Clicks from places you don't serve.</p></div>
-          <div><span class="k num">05</span><h3>Ads running when nobody answers</h3><p>Spend at night and on weekends.</p></div>
-          <div><span class="k num">06</span><h3>Paying a lot for your own name</h3><p>People who were already looking for you.</p></div>
-        </div>
-        <div class="watch rv"><span class="lbl">Also checked</span><span class="t">Most spend going to your costlier campaign</span><span class="t">Clicks costing more lately</span><span class="t">Budget running out before some searches</span><span class="t">Bidding that may chase the wrong goal</span></div>
-      </div>
-    </div>
-  </section>
-
-
   <section class="band-sec" id="agency" style="padding-top:0">
     <div class="wrap railed">
       <div class="rail"><span class="vlabel">Your setup</span></div>
@@ -863,100 +973,54 @@ html.locked, html.locked body { overflow: hidden; }
           <div class="rv"><span class="k">If an agency runs your ads</span><h3>A second set of eyes</h3>
             <ul>
               <li><svg><use href="#chk"/></svg><span>A short note for your agency, worded as questions.</span></li>
-              <li><svg><use href="#chk"/></svg><span>Send to my agency opens your email with it filled in.</span></li>
+              <li><svg><use href="#chk"/></svg><span>One tap opens your email with the note filled in.</span></li>
               <li><svg><use href="#chk"/></svg><span>A weekly check that the fixes got made.</span></li>
             </ul>
           </div>
           <div class="rv"><span class="k">If you run your own ads</span><h3>A to-do list that pays off</h3>
             <ul>
               <li><svg><use href="#chk"/></svg><span>Where to click and exactly what to change.</span></li>
-              <li><svg><use href="#chk"/></svg><span>Copy-ready lists, like searches to block.</span></li>
+              <li><svg><use href="#chk"/></svg><span>Lists you can copy and paste, like searches to block.</span></li>
               <li><svg><use href="#chk"/></svg><span>A weekly check that the fixes got made.</span></li>
             </ul>
-            <div class="plus-row"><span class="pill p-gold">Plus · coming soon</span><p><b>Ready-made one-click fixes.</b> Approve it and Watchdog makes the exact change, with nothing to type. Undo in one click.</p></div>
+            <div class="plus-row"><span class="pill p-gold">Plus · coming soon</span><p><b>One-click fixes.</b> You approve, Watchdog makes the change. Undo in one click.</p></div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
+  <section class="band-sec" id="checks" style="padding-top:0">
+    <div class="wrap railed">
+      <div class="rail"><span class="vlabel">What it checks</span></div>
+      <div>
+        <h2 class="h2 rv">The leaks we find <em class="it">most.</em></h2>
+        <p class="lede rv">Built around how homeowners search for a contractor.</p>
+        <div class="checks rv">
+          <div class="first"><span class="k">Checked first</span><h3>Calls and forms not being counted</h3><p>If Google can't count your leads, every other number is a guess.</p></div>
+          <div><span class="k num">02</span><h3>Job seekers and DIY</h3><p>"Deck builder jobs." "How to build a deck yourself." Never going to hire you.</p></div>
+          <div><span class="k num">03</span><h3>Work you don't do</h3><p>Clicks for services you don't offer.</p></div>
+          <div><span class="k num">04</span><h3>Outside your service area</h3><p>Clicks from places you don't serve.</p></div>
+          <div><span class="k num">05</span><h3>Ads running when nobody answers</h3><p>Spend at night and on weekends.</p></div>
+          <div><span class="k num">06</span><h3>Paying for your own name</h3><p>Clicks from people already searching for your business.</p></div>
+        </div>
+        <div class="watch rv"><span class="lbl">Also checked</span><span class="t">Most money going to your priciest campaign</span><span class="t">Clicks costing more lately</span><span class="t">Budget running out early in the day</span><span class="t">Google settings aimed at the wrong goal</span></div>
+      </div>
+    </div>
+  </section>
   <section class="band-sec" id="honest" style="padding-top:0">
     <div class="wrap railed">
       <div class="rail"><span class="vlabel">Our numbers</span></div>
       <div>
         <h2 class="h2 rv">Numbers you can <em class="it">check.</em></h2>
         <div class="rules rv">
-          <div><span class="n num">01</span><div><b>Spend that brought in nothing</b><p>Never "money you'll save."</p></div></div>
-          <div><span class="n num">02</span><div><b>Tracking checked first</b><p>If it's off, we say so.</p></div></div>
+          <div><span class="n num">01</span><div><b>We only count clear waste</b><p>Spend that brought in nothing. No guesses about savings.</p></div></div>
+          <div><span class="n num">02</span><div><b>Lead count checked first</b><p>If it's wrong, we tell you before anything else.</p></div></div>
           <div><span class="n num">03</span><div><b>Every number shows its source</b><p>Check it yourself in Google Ads.</p></div></div>
           <div><span class="n num">04</span><div><b>You can push back</b><p>Mark "this isn't waste" and it's gone.</p></div></div>
         </div>
       </div>
     </div>
   </section>
-
-  <section class="band-sec" id="pricing" style="padding-top:0">
-    <div class="wrap railed">
-      <div class="rail"><span class="vlabel">Pricing</span></div>
-      <div>
-        <h2 class="h2 rv">Start free. Stay if it <em class="it">pays.</em></h2>
-        <div class="price2">
-          <div class="pc-free rv">
-            <div class="pc-name">Free Leak Report</div>
-            <div class="pc-price num">$0</div>
-            <div class="pc-alt">One time. No card needed.</div>
-            <ul class="pc-list">
-              <li><svg><use href="#chk"/></svg><span>Spend that brought in nothing, last 30 days</span></li>
-              <li><svg><use href="#chk"/></svg><span>Every leak, with exactly what to change</span></li>
-              <li><svg><use href="#chk"/></svg><span>Lead tracking check</span></li>
-            </ul>
-            <div class="pc-cta"><a class="btn ghost" href="#start"><span class="roll"><span data-t="Get your free report">Get your free report</span></span></a></div>
-          </div>
-          <div class="pc-dog rv">
-            <div class="pc-name">Watchdog<span class="pc-badge">First 20 owners: $29</span></div>
-            <div class="pc-price num">$39<small> / month</small></div>
-            <div class="pc-alt"><b>The first 20 owners pay $29 a month</b>, locked in for as long as they stay. Or pay $349 a year.</div>
-            <ul class="pc-list">
-              <li><svg><use href="#chk"/></svg><span>The Monday email with your three best fixes</span></li>
-              <li><svg><use href="#chk"/></svg><span>A weekly check that the fixes got made</span></li>
-              <li><svg><use href="#chk"/></svg><span>New leaks as they show up, with a note for your agency</span></li>
-              <li><svg><use href="#chk"/></svg><span>90 days of trends</span></li>
-            </ul>
-            <div class="guar"><b>30-day guarantee.</b> If Watchdog doesn't find more wasted spend in your first 30 days than that month's price, the month is free. Month to month. Cancel anytime.</div>
-            <div class="pc-cta"><a class="btn" href="#start"><span class="roll"><span data-t="Start with the free report">Start with the free report</span></span><span class="arrow"><svg><use href="#ar"/></svg><svg><use href="#ar"/></svg></span></a></div>
-          </div>
-          <div class="pc-free pc-plus rv">
-            <div class="pc-name">Watchdog Plus<span class="pc-soon">Coming soon</span></div>
-            <div class="pc-price num">$59<small> / month</small></div>
-            <div class="pc-alt">Everything in Watchdog, plus one-click fixes for owners who run their own ads.</div>
-            <ul class="pc-list">
-              <li><svg><use href="#chk"/></svg><span>One-click fixes: block searches, stop ads where you don't work, and show ads only when someone answers</span></li>
-              <li><svg><use href="#chk"/></svg><span>You see each change first and approve it. Undo in one click.</span></li>
-              <li><svg><use href="#chk"/></svg><span>Never raises your budget or bids</span></li>
-              <li><svg><use href="#chk"/></svg><span>As they're ready: same-day alerts, booked-job tracking, and a monthly agency report card</span></li>
-            </ul>
-            <div class="pc-cta"><a class="btn ghost" href="#start" id="plusBtn"><span class="roll"><span data-t="Get on the list">Get on the list</span></span></a></div>
-          </div>
-        </div>
-        <div class="compare rv">
-          <h3>Compared to what you'd do otherwise</h3>
-          <div class="cmp-scroll"><table>
-            <thead><tr><th>Option</th><th>Cost</th><th>The catch</th></tr></thead>
-            <tbody>
-              <tr><td>Your agency's own report</td><td>Free</td><td>They grade their own work</td></tr>
-              <tr><td>Free online graders</td><td>Free</td><td>One time, then a sales pitch</td></tr>
-              <tr><td>A one-time expert audit</td><td>$500 to $800</td><td>Once, then nobody's watching</td></tr>
-              <tr><td>Adalysis</td><td>$127 to $149 a month</td><td>Built for PPC teams who live in the account</td></tr>
-              <tr><td>Optmyzr</td><td>$209 to $299 a month</td><td>Built for agencies managing $25k+ a month</td></tr>
-              <tr class="us"><td>Paydirt Watchdog</td><td>$39 a month</td><td>Every week, on your side</td></tr>
-            </tbody>
-          </table></div>
-          <p class="cmp-note">Adalysis and Optmyzr prices are their published entry plans, monthly or billed yearly, as of October 2026.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="band-sec" id="founder" style="padding-top:0">
     <div class="wrap railed">
       <div class="rail"><span class="vlabel">Founder</span></div>
@@ -971,15 +1035,14 @@ html.locked, html.locked body { overflow: hidden; }
       </div>
     </div>
   </section>
-
   <section class="band-sec" id="faq" style="padding-top:0">
     <div class="wrap railed">
       <div class="rail"><span class="vlabel">Questions</span></div>
       <div>
         <h2 class="h2 rv">What owners ask <em class="it">first.</em></h2>
         <div class="faq rv">
-          <details><summary><span class="qn num">01</span>Can Watchdog change my ads?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Not on the $39 plan. Read only means Google lets us look, not touch. With Plus (coming soon), owners who run their own ads can approve one-click fixes and undo them. Plus never raises your budget and never touches an account an agency runs.</div></details>
-          <details><summary><span class="qn num">02</span>Do I have to tell my agency?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Up to you. We never contact them. They may see our read-only login in your account's user list.</div></details>
+          <details><summary><span class="qn num">01</span>Can Watchdog change my ads?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Not on the $39 plan. We can look, but we can't change anything. With Plus (coming soon), owners who run their own ads can approve one-click fixes and undo them. Plus never raises what you spend and never touches an account an agency runs.</div></details>
+          <details><summary><span class="qn num">02</span>Do I have to tell my agency?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Up to you. We never contact them. They may see us listed as a user in your account.</div></details>
           <details><summary><span class="qn num">03</span>What if it flags something that isn't waste?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Tap "This isn't waste." It comes out of your totals and won't come back.</div></details>
           <details><summary><span class="qn num">04</span>What if it doesn't find anything?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Then you're in good shape. And if Watchdog doesn't find more waste than its price in your first 30 days, that month is free.</div></details>
           <details><summary><span class="qn num">05</span>How fast do I get my Leak Report?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Within 2 business days of giving access, by email. No login needed.</div></details>
@@ -1011,7 +1074,7 @@ html.locked, html.locked body { overflow: hidden; }
               <div class="field"><label for="l-trade">Trade <span class="opt-l">(optional)</span></label>
                 <select id="l-trade" name="trade"><option value="">Choose your trade</option><option>Turf and landscaping</option><option>Roofing</option><option>HVAC</option><option>Plumbing</option><option>Electrical</option><option>Concrete and hardscape</option><option>Painting</option><option>Other</option></select></div>
               <div class="field"><label for="l-spend">Monthly Google Ads spend <span class="opt-l">(optional)</span></label>
-                <select id="l-spend" name="spend"><option value="">Choose a range</option><option>Under $1,500</option><option>$1,500 to $3,000</option><option>$3,000 to $6,000</option><option>$6,000 to $10,000</option><option>Over $10,000</option></select></div>
+                <select id="l-spend" name="spend"><option value="">Choose a range</option><option>Under $500</option><option>$500 to $1,500</option><option>$1,500 to $3,000</option><option>$3,000 to $6,000</option><option>$6,000 to $10,000</option><option>Over $10,000</option></select></div>
               <div class="field"><label for="l-who">Who runs your ads? <span class="opt-l">(optional)</span></label>
                 <select id="l-who" name="who"><option value="">Choose one</option><option>I do</option><option>An agency or freelancer</option></select></div>
               <label class="chk full" for="l-plus"><input type="checkbox" id="l-plus" name="plus"> Tell me when Watchdog Plus is ready</label>
@@ -1027,7 +1090,7 @@ html.locked, html.locked body { overflow: hidden; }
     <footer class="foot">
       <div class="wrap">
         <a class="logo" href="#top"><svg><use href="#mark"/></svg><span class="wm"><b>Paydirt</b> <span>Watchdog</span></span></a>
-        <nav aria-label="Footer"><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="negative-keywords/">Keyword lists</a><a href="guides/">Guides</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+        <nav aria-label="Footer"><a href="#pricing">Pricing</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="negative-keywords/">Keyword lists</a><a href="guides/">Guides</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
         <span><a href="mailto:steven@paydirtgrowth.com">steven@paydirtgrowth.com</a> · Denver, Colorado · © 2026</span>
       </div>
       <div class="wrap disclose">Paydirt Watchdog is run by Paydirt Growth, which also manages Google Ads for trade businesses. We only bring that up if you ask.</div>
@@ -1038,10 +1101,10 @@ html.locked, html.locked body { overflow: hidden; }
 <div class="mnav" id="mnav" hidden role="dialog" aria-modal="true" aria-label="Menu">
   <div class="mn-top wrap"><a class="logo" href="#top"><svg><use href="#mark"/></svg><span class="wm"><b>Paydirt</b> <span>Watchdog</span></span></a><button class="menu-btn on" id="menuX" type="button"><span class="roll"><span data-t="Close">Close</span></span><i aria-hidden="true"></i></button></div>
   <nav class="mn-links wrap" aria-label="Menu links">
-    <a href="#how"><span>How it works</span><span class="arrow"><svg><use href="#ar"/></svg><svg><use href="#ar"/></svg></span></a>
-    <a href="#checks"><span>What it checks</span><span class="arrow"><svg><use href="#ar"/></svg><svg><use href="#ar"/></svg></span></a>
     <a href="#sample"><span>Sample report</span><span class="arrow"><svg><use href="#ar"/></svg><svg><use href="#ar"/></svg></span></a>
     <a href="#pricing"><span>Pricing</span><span class="arrow"><svg><use href="#ar"/></svg><svg><use href="#ar"/></svg></span></a>
+    <a href="#how"><span>How it works</span><span class="arrow"><svg><use href="#ar"/></svg><svg><use href="#ar"/></svg></span></a>
+    <a href="#checks"><span>What it checks</span><span class="arrow"><svg><use href="#ar"/></svg><svg><use href="#ar"/></svg></span></a>
     <a href="#faq"><span>FAQ</span><span class="arrow"><svg><use href="#ar"/></svg><svg><use href="#ar"/></svg></span></a>
   </nav>
   <div class="mn-foot wrap"><a class="btn" href="#start"><span class="roll"><span data-t="Get your free Leak Report">Get your free Leak Report</span></span><span class="arrow"><svg><use href="#ar"/></svg><svg><use href="#ar"/></svg></span></a><span><a href="mailto:steven@paydirtgrowth.com">steven@paydirtgrowth.com</a> · Denver, Colorado</span></div>
@@ -1170,6 +1233,15 @@ html.locked, html.locked body { overflow: hidden; }
   // Leak Report request
   var AUDIT_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwuIeyeDzAkbqIXQjbNpLPpGeiTdhcPAP7P5LzX_UjSB-t2wwqeXY45R46yIbTfU2rySg/exec';
   var ACCESS_EMAIL = 'audits@paydirtgrowth.com';
+  document.querySelectorAll('[data-copy]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = document.getElementById(b.getAttribute('data-copy')).textContent.trim();
+      var done = function () { var o = b.textContent; b.textContent = 'Copied'; setTimeout(function () { b.textContent = o; }, 1600); };
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(t).then(done, done);
+      else { var ta = document.createElement('textarea'); ta.value = t; ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch (e) {} ta.remove(); done(); }
+    });
+  });
+  document.querySelectorAll('[data-plus]').forEach(function (a) { a.addEventListener('click', function () { var c = document.getElementById('l-plus'); if (c) c.checked = true; }); });
   var plusBtn = document.getElementById('plusBtn');
   if (plusBtn) plusBtn.addEventListener('click', function () { document.getElementById('l-plus').checked = true; });
   function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
